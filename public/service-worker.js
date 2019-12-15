@@ -1,14 +1,19 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'cache-v1';
 
 var urlsToCache = [
-  '/',
-  '/styles.css',
-  '/index.js'
+  "/",
+  "/styles.css",
+  "/index.js",
+  "/index.html",
+  "/favicon.ico",
+  "/db.js",
+  "/assets/images/icons/favicon-16x16.png",
+  "/assets/images/icons/favicon-32x32.png",
+  "/assets/images/icons/favicon-192x192.png",
 ];
 
 
 self.addEventListener('install', function(event) {
-  // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
